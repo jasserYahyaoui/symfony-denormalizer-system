@@ -22,3 +22,24 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\EventSubscriber\ApiSubscriber:
+        arguments:
+            $normalizers: !tagged jasser.api.normalizer
+        tags:
+            - { name: jms_serializer.event_subscriber }
+
+# All denormalizer repository
+
+    App\Resources\config\denormalizer\:
+        resource: "%kernel.project_dir%/src/Resources/config/denormalizer/"
+        tags: [jasser.api.normalizer]
+
+
+#Specefic denormalizer class
+    Product_denormalizer:
+        class: App\Resources\config\denormalizer\ProductDenormalizer
+        public: false
+        autowire: true
+        autoconfigure: true
+        tags: [jasser.api.normalizer]

@@ -1,0 +1,5 @@
+App\Entity\CarsCollection:
+  properties:
+    items:
+      type: array<App\Entity\Car>
+      serialized_name: items

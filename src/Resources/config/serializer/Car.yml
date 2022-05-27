@@ -1,0 +1,8 @@
+App\Entity\Car:
+    properties:
+        name:
+            type: string
+            serialized_name: name
+        color:
+            type: string
+            serialized_name: color

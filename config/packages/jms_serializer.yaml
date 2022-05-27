@@ -1,0 +1,18 @@
+jms_serializer:
+    metadata:
+        cache: file
+        debug: '%kernel.debug%'
+        file_cache:
+            dir: '%kernel.cache_dir%/serializer'
+        auto_detection: false
+        directories:
+            app:
+                namespace_prefix: "App\\Entity"
+                path: "%kernel.project_dir%/src/Resources/config/serializer"
+    property_naming:
+        separator:  _
+        lower_case: true
+    handlers:
+        datetime:
+            default_format: 'Y-m-d\TH:i:sO'
+            default_timezone: 'UTC'

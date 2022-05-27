@@ -1,0 +1,17 @@
+App\Entity\Product:
+    properties:
+        name:
+            type: string
+            serialized_name: nametoto
+        code:
+            type: string
+            serialized_name: code
+        Price:
+            type: float
+            serialized_name: price
+        person:
+            type: App\Entity\Person
+            serialized_name: person
+        carsCollection:
+            type: App\Entity\CarsCollection
+            serialized_name: carsCollection

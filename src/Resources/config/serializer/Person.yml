@@ -1,0 +1,5 @@
+App\Entity\Person:
+    properties:
+        name:
+            type: string
+            serialized_name: name
